@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nena D Xclusive | Luxury Wigs &amp; Bundles</title>
+<meta name="description" content="Nena D Xclusive — luxury 100% virgin and remy human hair wigs and bundles. Bold, glamorous, fearless.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,800;1,600&family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --black: #0b0b0c;
+    --ink: #151517;
+    --gold: #d4af37;
+    --gold-soft: #f1d98a;
+    --rose: #c9477a;
+    --cream: #f7f1e8;
+    --muted: #b9b3aa;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    background: var(--black);
+    color: var(--cream);
+    font-family: "Montserrat", system-ui, sans-serif;
+    line-height: 1.6;
+  }
+  a { color: inherit; text-decoration: none; }
+  .wrap { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
+
+  /* Nav */
+  nav {
+    position: sticky; top: 0; z-index: 10;
+    background: rgba(11,11,12,0.92);
+    backdrop-filter: blur(8px);
+    border-bottom: 1px solid rgba(212,175,55,0.25);
+  }
+  nav .wrap { display: flex; align-items: center; justify-content: space-between; height: 64px; }
+  .logo { font-family: "Playfair Display", serif; font-weight: 800; font-size: 1.3rem; letter-spacing: 1px; }
+  .logo span { color: var(--gold); }
+  .nav-links { display: flex; gap: 24px; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 2px; }
+  .nav-links a:hover { color: var(--gold); }
+
+  /* Hero */
+  .hero {
+    min-height: 88vh;
+    display: flex; align-items: center; text-align: center;
+    background:
+      radial-gradient(ellipse at 20% 20%, rgba(201,71,122,0.28), transparent 55%),
+      radial-gradient(ellipse at 80% 80%, rgba(212,175,55,0.22), transparent 55%),
+      var(--black);
+  }
+  .eyebrow { color: var(--gold); text-transform: uppercase; letter-spacing: 5px; font-size: 0.8rem; margin-bottom: 18px; }
+  .hero h1 {
+    font-family: "Playfair Display", serif;
+    font-size: clamp(2.6rem, 8vw, 5.5rem);
+    line-height: 1.05; font-weight: 800;
+  }
+  .hero h1 em { color: var(--gold); font-style: italic; }
+  .hero p { max-width: 560px; margin: 24px auto 36px; color: var(--muted); font-size: 1.05rem; }
+  .btn {
+    display: inline-block; padding: 15px 34px;
+    background: linear-gradient(135deg, var(--gold), var(--gold-soft));
+    color: var(--black); font-weight: 700;
+    text-transform: uppercase; letter-spacing: 2px; font-size: 0.85rem;
+    border-radius: 2px; transition: transform .2s, box-shadow .2s;
+  }
+  .btn:hover { transform: translateY(-2px); box-shadow: 0 10px 30px rgba(212,175,55,0.35); }
+  .btn.ghost { background: transparent; color: var(--gold); border: 1px solid var(--gold); margin-left: 10px; }
+
+  /* Sections */
+  section { padding: 90px 0; }
+  .section-title { text-align: center; margin-bottom: 50px; }
+  .section-title h2 { font-family: "Playfair Display", serif; font-size: clamp(2rem, 5vw, 3rem); }
+  .section-title p { color: var(--muted); margin-top: 10px; }
+  .gold-line { width: 60px; height: 2px; background: var(--gold); margin: 16px auto 0; }
+
+  /* Collections */
+  .tiers { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 22px; }
+  .tier {
+    background: var(--ink);
+    border: 1px solid rgba(212,175,55,0.2);
+    padding: 36px 28px; text-align: center;
+    transition: border-color .25s, transform .25s;
+  }
+  .tier:hover { border-color: var(--gold); transform: translateY(-4px); }
+  .tier.featured { border-color: var(--gold); position: relative; }
+  .tier.featured::before {
+    content: "Most Loved"; position: absolute; top: -12px; left: 50%; transform: translateX(-50%);
+    background: var(--rose); color: #fff; font-size: 0.7rem; letter-spacing: 2px;
+    text-transform: uppercase; padding: 4px 12px;
+  }
+  .tier h3 { font-family: "Playfair Display", serif; font-size: 1.7rem; color: var(--gold); }
+  .price { font-size: 1.1rem; font-weight: 700; margin: 10px 0 16px; }
+  .tier p { color: var(--muted); font-size: 0.95rem; }
+
+  /* Why us */
+  .why { background: var(--ink); }
+  .features { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 30px; }
+  .feature { text-align: center; }
+  .feature .icon { font-size: 2rem; color: var(--gold); margin-bottom: 12px; }
+  .feature h4 { font-size: 1rem; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 8px; }
+  .feature p { color: var(--muted); font-size: 0.95rem; }
+
+  /* Occasions */
+  .occasions { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; }
+  .chip {
+    border: 1px solid var(--rose); color: var(--cream);
+    padding: 10px 20px; border-radius: 30px; font-size: 0.9rem;
+  }
+
+  /* Contact */
+  .contact { text-align: center; background:
+      radial-gradient(ellipse at 50% 0%, rgba(212,175,55,0.18), transparent 60%), var(--black); }
+  .contact p { color: var(--muted); max-width: 520px; margin: 0 auto 30px; }
+
+  footer {
+    border-top: 1px solid rgba(212,175,55,0.2);
+    padding: 28px 0; text-align: center; color: var(--muted); font-size: 0.8rem;
+  }
+
+  @media (max-width: 640px) {
+    .nav-links { display: none; }
+    .btn.ghost { margin: 14px 0 0; }
+    section { padding: 70px 0; }
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="wrap">
+    <a href="#" class="logo">Nena D <span>Xclusive</span></a>
+    <div class="nav-links">
+      <a href="#collections">Collections</a>
+      <a href="#why">Our Hair</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="wrap">
+    <div class="eyebrow">Luxury Wigs &amp; Bundles</div>
+    <h1>Bold. Glamorous.<br><em>Fearless.</em></h1>
+    <p>Premium 100% virgin and remy human hair for the woman who walks in and owns the room.</p>
+    <a href="#collections" class="btn">Shop the Collections</a>
+    <a href="#contact" class="btn ghost">Get Notified</a>
+  </div>
+</header>
+
+<section id="collections">
+  <div class="wrap">
+    <div class="section-title">
+      <h2>The Collections</h2>
+      <p>A crown for every queen, at every budget.</p>
+      <div class="gold-line"></div>
+    </div>
+    <div class="tiers">
+      <div class="tier">
+        <h3>Essentials</h3>
+        <div class="price">Under $150</div>
+        <p>Your everyday glam. Quality human hair that makes luxury easy to start.</p>
+      </div>
+      <div class="tier featured">
+        <h3>Signature</h3>
+        <div class="price">$150 – $300</div>
+        <p>Our go-to favorites. Soft, full, and made to turn heads all day.</p>
+      </div>
+      <div class="tier">
+        <h3>Icon</h3>
+        <div class="price">$300 – $700</div>
+        <p>Raw, single-donor luxury for content creators and statement moments.</p>
+      </div>
+      <div class="tier">
+        <h3>Bespoke</h3>
+        <div class="price">$800+</div>
+        <p>One-of-a-kind pieces for weddings, proms, and your biggest days.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="why" class="why">
+  <div class="wrap">
+    <div class="section-title">
+      <h2>Why Our Hair</h2>
+      <div class="gold-line"></div>
+    </div>
+    <div class="features">
+      <div class="feature">
+        <div class="icon">&#10022;</div>
+        <h4>100% Human Hair</h4>
+        <p>Virgin and remy hair only, with cuticles aligned for a natural, tangle-resistant finish.</p>
+      </div>
+      <div class="feature">
+        <div class="icon">&#9819;</div>
+        <h4>Raw &amp; Processed</h4>
+        <p>Single and multi-donor options, so you choose the texture and look that's you.</p>
+      </div>
+      <div class="feature">
+        <div class="icon">&#10084;</div>
+        <h4>Made to Empower</h4>
+        <p>Every piece is picked to make you feel strong, confident, and unapologetically you.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="section-title">
+      <h2>Made for Your Moment</h2>
+      <div class="gold-line"></div>
+    </div>
+    <div class="occasions">
+      <span class="chip">Everyday Glam</span>
+      <span class="chip">Weddings</span>
+      <span class="chip">Prom</span>
+      <span class="chip">Content Creation</span>
+      <span class="chip">Date Night</span>
+      <span class="chip">Special Events</span>
+    </div>
+  </div>
+</section>
+
+<section id="contact" class="contact">
+  <div class="wrap">
+    <div class="section-title">
+      <h2>Launching Soon</h2>
+      <div class="gold-line"></div>
+    </div>
+    <p>Be the first to know when the store opens. Follow us on Facebook for drops, styling tips, and launch-day deals.</p>
+    <a href="https://www.facebook.com/share/1EwBmkBgob/" target="_blank" rel="noopener" class="btn">Follow on Facebook</a>
+    <a href="mailto:nenadxclusive@gmail.com" class="btn ghost">Email Us</a>
+  </div>
+</section>
+
+<footer>
+  &copy; 2026 Nena D Xclusive LLC. All rights reserved.
+</footer>
+
+</body>
+</html>
